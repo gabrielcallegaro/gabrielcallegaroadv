@@ -62,26 +62,57 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.5rem;
+
+  /* Brand palette — Gabriel Callegaro Advocacia Trabalhista */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.18 0.005 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.18 0.005 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --popover-foreground: oklch(0.18 0.005 0);
+
+  /* Vermelho escuro #8B0000 */
+  --primary: oklch(0.42 0.18 27);
+  --primary-foreground: oklch(0.985 0 0);
+  /* Vermelho vinho #A61B1B */
+  --primary-glow: oklch(0.5 0.2 27);
+
+  /* Preto / cinza escuro */
+  --secondary: oklch(0.22 0.005 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.96 0.003 0);
+  --muted-foreground: oklch(0.45 0.01 0);
+  --accent: oklch(0.42 0.18 27);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.9 0.005 0);
+  --input: oklch(0.92 0.005 0);
+  --ring: oklch(0.42 0.18 27);
+
+  /* Brand tokens */
+  --brand-dark: oklch(0.18 0.005 0);     /* #111 */
+  --brand-darker: oklch(0.13 0.005 0);
+  --brand-charcoal: oklch(0.26 0.005 0); /* #222 */
+  --brand-red: oklch(0.42 0.18 27);      /* #8B0000 */
+  --brand-wine: oklch(0.5 0.2 27);       /* #A61B1B */
+  --whatsapp: oklch(0.65 0.18 145);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.13 0.005 0) 0%, oklch(0.18 0.005 0) 45%, oklch(0.32 0.13 27) 100%);
+  --gradient-red: linear-gradient(135deg, var(--brand-red), var(--brand-wine));
+  --gradient-dark: linear-gradient(180deg, var(--brand-darker), var(--brand-dark));
+
+  --shadow-elegant: 0 20px 60px -20px oklch(0.42 0.18 27 / 0.35);
+  --shadow-card: 0 10px 30px -15px oklch(0 0 0 / 0.15);
+  --shadow-glow: 0 0 40px oklch(0.5 0.2 27 / 0.4);
+
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +171,50 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-hero { background: var(--gradient-hero); }
+  .bg-brand-dark { background: var(--brand-dark); }
+  .bg-brand-darker { background: var(--brand-darker); }
+  .bg-brand-red { background: var(--brand-red); }
+  .text-brand-red { color: var(--brand-red); }
+  .text-brand-wine { color: var(--brand-wine); }
+  .border-brand-red { border-color: var(--brand-red); }
+  .gradient-red { background: var(--gradient-red); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .transition-smooth { transition: var(--transition-smooth); }
+  .font-display { font-family: var(--font-display); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hover-lift {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elegant);
   }
 }
