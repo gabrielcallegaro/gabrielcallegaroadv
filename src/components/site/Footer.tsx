@@ -1,5 +1,6 @@
-import { Scale, Instagram, Linkedin, Facebook, Mail } from "lucide-react";
+import { Instagram, Linkedin, Facebook, Mail } from "lucide-react";
 import { LAWYER, WHATSAPP_URL } from "@/lib/contact";
+import logoGc from "@/assets/logo-gc.png.asset.json";
 
 const links = [
   { href: "#inicio", label: "Início" },
@@ -15,9 +16,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-3 gap-12">
         <div>
           <div className="flex items-center gap-2 text-white">
-            <span className="grid h-10 w-10 place-items-center rounded gradient-red">
-              <Scale className="h-5 w-5" />
-            </span>
+            <img src={logoGc.url} alt="Logo Gabriel Callegaro" className="h-10 w-10 object-contain" />
             <span className="font-display text-lg font-semibold">Gabriel Callegaro</span>
           </div>
           <p className="mt-5 text-sm leading-relaxed">
