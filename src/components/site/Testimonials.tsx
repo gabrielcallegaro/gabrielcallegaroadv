@@ -1,9 +1,9 @@
 import { Star, Quote } from "lucide-react";
 
 const testimonials = [
-  { name: "Cliente em breve", role: "Vale dos Sinos — RS", text: "Espaço reservado para receber em breve as avaliações de clientes atendidos pelo escritório." },
-  { name: "Cliente em breve", role: "Novo Hamburgo — RS", text: "Espaço reservado para receber em breve as avaliações de clientes atendidos pelo escritório." },
-  { name: "Cliente em breve", role: "São Leopoldo — RS", text: "Espaço reservado para receber em breve as avaliações de clientes atendidos pelo escritório." },
+  { name: "Jean Rodrigo", role: "Porto Alegre — RS", text: "Ótimo atendimento, profissional altamente qualificado. Indico e recomendo 👏👏👏" },
+  { name: "Alessandra Martins", role: "Novo Hamburgo — RS", text: "Trabalho com excelência, um profissional muito responsável e apto... super indicado!" },
+  { name: "Jorge Medeiros", role: "Porto Alegre — RS", text: "Muito atencioso com o cliente, atende e tira todas as dúvidas da gente, tem muita paciência e faz um trabalho muito satisfatório. Só tenho a agradecer." },
 ];
 
 export function Testimonials() {
