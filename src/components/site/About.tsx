@@ -22,34 +22,34 @@ export function About() {
           </h2>
           <div className="mt-6 h-1 w-20 gradient-red rounded" />
 
-          <div className="mt-8 sm:flex sm:items-start sm:gap-6">
+          <div className="mt-8 flex flex-col sm:flex-row sm:items-start gap-6">
             <img
               src={portrait.url}
               alt="Gabriel Callegaro de Souza, advogado trabalhista OAB/RS 142.158"
               loading="lazy"
-              className="float-none sm:float-left mb-5 sm:mb-2 sm:mr-6 h-44 w-44 rounded-lg object-cover shadow-elegant ring-1 ring-[var(--border)]"
+              className="h-48 w-40 flex-shrink-0 rounded-lg object-cover shadow-elegant ring-1 ring-[var(--border)]"
             />
-            <div className="space-y-5 text-[var(--brand-charcoal)] leading-relaxed">
-            <p>
-              Advogado dedicado integralmente ao Direito do Trabalho, Gabriel
-              Callegaro de Souza atua na defesa de trabalhadores em todo o
-              Rio Grande do Sul, com foco em resultados justos e na correta
-              reparação dos direitos violados.
-            </p>
-            <p>
-              Cada caso é tratado com profundidade técnica, escuta atenta e
-              uma estratégia personalizada — porque por trás de cada processo
-              existe uma história, uma família e uma trajetória profissional
-              que merecem respeito.
-            </p>
-            <p>
-              Atendimento online e presencial, comunicação direta e
-              transparente do início ao fim.
-            </p>
+            <div className="space-y-4 text-[var(--brand-charcoal)] leading-relaxed">
+              <p>
+                Advogado dedicado integralmente ao Direito do Trabalho, Gabriel
+                Callegaro de Souza atua na defesa de trabalhadores em todo o
+                Rio Grande do Sul, com foco em resultados justos e na correta
+                reparação dos direitos violados.
+              </p>
+              <p>
+                Cada caso é tratado com profundidade técnica, escuta atenta e
+                uma estratégia personalizada — porque por trás de cada processo
+                existe uma história, uma família e uma trajetória profissional
+                que merecem respeito.
+              </p>
+              <p>
+                Atendimento online e presencial, comunicação direta e
+                transparente do início ao fim.
+              </p>
             </div>
           </div>
 
-          <div className="mt-8 inline-flex items-center gap-4 rounded-lg border border-[var(--border)] bg-[var(--muted)] px-6 py-4">
+          <div className="mt-8 flex items-center gap-4 rounded-lg border border-[var(--border)] bg-[var(--muted)] px-6 py-4 w-fit">
             <div className="h-12 w-12 grid place-items-center rounded gradient-red text-white font-display text-xl font-bold">
               GC
             </div>
