@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Scale, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/contact";
+import logoGc from "@/assets/logo-gc.png.asset.json";
 
 const links = [
   { href: "#inicio", label: "Início" },
@@ -30,9 +31,7 @@ export function Header() {
     >
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2 text-white">
-          <span className="grid h-10 w-10 place-items-center rounded gradient-red">
-            <Scale className="h-5 w-5" />
-          </span>
+          <img src={logoGc.url} alt="Logo Gabriel Callegaro" className="h-10 w-10 object-contain" />
           <span className="font-display text-lg font-semibold tracking-tight">
             Gabriel Callegaro
           </span>
