@@ -12,7 +12,7 @@ const pillars = [
 export function About() {
   return (
     <section id="sobre" className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-start">
+      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="reveal">
           <span className="text-xs uppercase tracking-[0.25em] text-brand-red font-semibold">
             Sobre o Advogado
