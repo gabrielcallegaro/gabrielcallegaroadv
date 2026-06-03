@@ -1,5 +1,5 @@
 // Dados de contato — altere aqui o número do WhatsApp do escritório.
-export const WHATSAPP_NUMBER = "5551999999999"; // formato internacional, somente dígitos
+export const WHATSAPP_NUMBER = "5551993049947"; // formato internacional, somente dígitos
 export const WHATSAPP_MESSAGE = encodeURIComponent(
   "Olá Dr. Gabriel, gostaria de uma análise do meu caso trabalhista.",
 );
