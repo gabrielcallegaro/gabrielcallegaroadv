@@ -51,7 +51,7 @@ export function Footer() {
           </a>
           <div className="mt-6 flex gap-3">
             {[
-              { Icon: Instagram, label: "Instagram", href: "#" },
+              { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gabrielcallegaro.adv." },
               { Icon: Linkedin, label: "LinkedIn", href: "#" },
               { Icon: Facebook, label: "Facebook", href: "#" },
               { Icon: Mail, label: "E-mail", href: "mailto:contato@example.com" },
@@ -59,6 +59,8 @@ export function Footer() {
               <a
                 key={label}
                 href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={label}
                 className="h-10 w-10 grid place-items-center rounded border border-white/10 hover:border-[var(--brand-wine)] hover:text-white transition-smooth"
               >
