@@ -56,7 +56,7 @@ const post: BlogPost = {
     <p>Dentro da ação, é possível cobrar os direitos dos últimos 5 anos anteriores ao ajuizamento. Ou seja, quem espera demais para buscar orientação pode perder parte do que teria direito a receber.</p>
     <p>Se você está vivendo uma dessas situações agora e ainda está na empresa, o momento ideal para buscar um advogado trabalhista é antes de tomar qualquer decisão — inclusive antes de pedir demissão. Uma orientação prévia pode fazer diferença significativa no que você vai receber.</p>
 
-    <p><a class="cta-button" href="${WHATSAPP_URL}" target="_blank" rel="noopener noreferrer">Veja seu caso com um advogado especializado</a></p>
+    <p style="text-align:center"><a class="cta-button" href="${WHATSAPP_URL}" target="_blank" rel="noopener noreferrer">Veja seu caso com um advogado especializado</a></p>
   `,
 };
 

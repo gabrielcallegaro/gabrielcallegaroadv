@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useRouterState } from "@tanstack/react-router";
 import { WHATSAPP_URL } from "@/lib/contact";
 import logoGc from "@/assets/logo-gc.png.asset.json";
 
@@ -16,6 +17,8 @@ const links = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const solid = scrolled || pathname.startsWith("/blog");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -27,7 +30,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-smooth ${
-        scrolled ? "backdrop-blur-md bg-[oklch(0.13_0.005_0/0.85)] border-b border-white/5" : "bg-transparent"
+        solid ? "backdrop-blur-md bg-[oklch(0.13_0.005_0/0.85)] border-b border-white/5" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">

@@ -51,7 +51,7 @@ export function Footer() {
           </a>
           <div className="mt-6 flex gap-3">
             {[
-              { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gabrielcallegaro.adv." },
+              { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gabrielcallegaro.adv" },
               { Icon: Linkedin, label: "LinkedIn", href: "#" },
               { Icon: Facebook, label: "Facebook", href: "#" },
               { Icon: Mail, label: "E-mail", href: "mailto:contato@example.com" },
