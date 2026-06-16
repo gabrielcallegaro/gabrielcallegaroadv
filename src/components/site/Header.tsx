@@ -19,6 +19,11 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const solid = scrolled || pathname.startsWith("/blog");
+  const isBlog = pathname.startsWith("/blog");
+  const resolveHref = (href: string) => {
+    if (href.startsWith("#")) return isBlog ? `/${href}` : href;
+    return href;
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -45,7 +50,7 @@ export function Header() {
           {links.map((l) => (
             <a
               key={l.href}
-              href={l.href}
+              href={resolveHref(l.href)}
               className="text-sm text-white/80 hover:text-white transition-smooth relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-[var(--brand-wine)] hover:after:w-full after:transition-all"
             >
               {l.label}
@@ -77,7 +82,7 @@ export function Header() {
             {links.map((l) => (
               <a
                 key={l.href}
-                href={l.href}
+                href={resolveHref(l.href)}
                 onClick={() => setOpen(false)}
                 className="text-white/80 hover:text-white py-2"
               >
