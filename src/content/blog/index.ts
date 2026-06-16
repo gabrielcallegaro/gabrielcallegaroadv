@@ -12,8 +12,9 @@ export interface BlogPost {
 // exportando `default` um objeto BlogPost, e importe-o abaixo.
 import direitosRescisao from "./direitos-na-rescisao.ts";
 import rescisaoIndireta from "./rescisao-indireta.ts";
+import reconhecimentoVinculo from "./reconhecimento-vinculo.ts";
 
-export const posts: BlogPost[] = [direitosRescisao, rescisaoIndireta].sort((a, b) =>
+export const posts: BlogPost[] = [direitosRescisao, rescisaoIndireta, reconhecimentoVinculo].sort((a, b) =>
   b.date.localeCompare(a.date),
 );
 
