@@ -89,9 +89,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "pt_BR" },
       { property: "og:title", content: "Gabriel Callegaro de Souza | Advogado Trabalhista | OAB/RS 142.158" },
       { name: "twitter:title", content: "Gabriel Callegaro de Souza | Advogado Trabalhista | OAB/RS 142.158" },
-      { name: "description", content: "A professional, modern, and responsive website for a labor law firm, designed to generate leads and consultations." },
-      { property: "og:description", content: "A professional, modern, and responsive website for a labor law firm, designed to generate leads and consultations." },
-      { name: "twitter:description", content: "A professional, modern, and responsive website for a labor law firm, designed to generate leads and consultations." },
+      { property: "og:description", content: "Advogado Trabalhista no Rio Grande do Sul. Atendimento online e presencial. Verbas rescisórias, horas extras, vínculo, acidente de trabalho e mais." },
+      { name: "twitter:description", content: "Advogado Trabalhista no Rio Grande do Sul. Atendimento online e presencial. Verbas rescisórias, horas extras, vínculo, acidente de trabalho e mais." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/360637c4-e994-4363-a880-d98606fb0be9/id-preview-ee70cb7b--8243123b-d7da-4215-adaf-30c030e2e928.lovable.app-1780314375836.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/360637c4-e994-4363-a880-d98606fb0be9/id-preview-ee70cb7b--8243123b-d7da-4215-adaf-30c030e2e928.lovable.app-1780314375836.png" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -124,7 +123,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
