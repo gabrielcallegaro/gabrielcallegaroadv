@@ -21,6 +21,7 @@ const areas = [
 export function PracticeAreas() {
   return (
     <section id="areas" className="py-24 bg-[var(--brand-dark)] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--brand-wine)] to-transparent opacity-70" aria-hidden="true" />
       <div
         className="absolute inset-0 opacity-20"
         style={{
@@ -28,6 +29,7 @@ export function PracticeAreas() {
             "radial-gradient(circle at 20% 0%, oklch(0.42 0.18 27 / 0.6), transparent 50%), radial-gradient(circle at 80% 100%, oklch(0.5 0.2 27 / 0.4), transparent 50%)",
         }}
       />
+
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="text-center max-w-2xl mx-auto reveal">
           <span className="text-xs uppercase tracking-[0.25em] text-[var(--brand-wine)] font-semibold">

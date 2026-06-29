@@ -110,8 +110,8 @@ function Index() {
     <main className="bg-white">
       <Header />
       <Hero />
-      <About />
       <PracticeAreas />
+      <About />
       <Process />
       <Differentials />
       <FAQ />
@@ -120,6 +120,7 @@ function Index() {
       <FinalCTA />
       <Footer />
       <WhatsAppFloat />
+
     </main>
   );
 }
