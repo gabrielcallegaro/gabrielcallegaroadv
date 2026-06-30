@@ -8,6 +8,7 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => {
     const post = getPostBySlug(params.slug);
     if (!post) return { meta: [{ title: "Artigo não encontrado" }] };
+    const url = `https://callegaroadvocacia.com.br/blog/${post.slug}`;
     return {
       meta: [
         { title: `${post.title} | Blog — Gabriel Callegaro` },
@@ -15,9 +16,30 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.description },
         { property: "og:type", content: "article" },
+        { property: "og:url", content: url },
+        { name: "twitter:card", content: "summary_large_image" },
         { property: "article:published_time", content: post.date },
       ],
       links: [{ rel: "canonical", href: `/blog/${post.slug}` }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.description,
+            author: { "@type": "Person", name: post.author ?? "Gabriel Callegaro" },
+            publisher: {
+              "@type": "Organization",
+              name: "Gabriel Callegaro Advocacia",
+            },
+            datePublished: post.date,
+            dateModified: post.date,
+            mainEntityOfPage: url,
+          }),
+        },
+      ],
     };
   },
   loader: ({ params }) => {
