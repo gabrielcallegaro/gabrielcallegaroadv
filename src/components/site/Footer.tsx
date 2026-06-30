@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Facebook, Mail } from "lucide-react";
+
 import { LAWYER, WHATSAPP_URL } from "@/lib/contact";
 import logoGc from "@/assets/logo-gc.png.asset.json";
 
@@ -54,7 +55,7 @@ export function Footer() {
               { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gabrielcallegaro.adv" },
               { Icon: Linkedin, label: "LinkedIn", href: "#" },
               { Icon: Facebook, label: "Facebook", href: "#" },
-              { Icon: Mail, label: "E-mail", href: "mailto:contato@example.com" },
+              { Icon: Mail, label: "E-mail", href: "mailto:gabriel.callegaro1@gmail.com" },
             ].map(({ Icon, label, href }) => (
               <a
                 key={label}
