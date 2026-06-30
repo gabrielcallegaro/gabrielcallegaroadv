@@ -13,8 +13,9 @@ export interface BlogPost {
 import rescisaoIndireta from "./rescisao-indireta.ts";
 import reconhecimentoVinculo from "./reconhecimento-vinculo.ts";
 import estabilidadeGestante from "./estabilidade-gestante.ts";
+import insalubridadePericulosidade from "./insalubridade-periculosidade.ts";
 
-export const posts: BlogPost[] = [rescisaoIndireta, reconhecimentoVinculo, estabilidadeGestante].sort((a, b) =>
+export const posts: BlogPost[] = [rescisaoIndireta, reconhecimentoVinculo, estabilidadeGestante, insalubridadePericulosidade].sort((a, b) =>
   b.date.localeCompare(a.date),
 );
 
