@@ -14,10 +14,10 @@ function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
-export function WhatsAppFloat() {
+export function WhatsAppFloat({ href = WHATSAPP_URL }: { href?: string } = {}) {
   return (
     <a
-      href={WHATSAPP_URL}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"

@@ -5,6 +5,11 @@ export const WHATSAPP_MESSAGE = encodeURIComponent(
 );
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
+export const WHATSAPP_MESSAGE_BANCARIO = encodeURIComponent(
+  "Olá, preciso de ajuda para meu caso trabalhista bancário.",
+);
+export const WHATSAPP_URL_BANCARIO = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE_BANCARIO}`;
+
 export const LAWYER = {
   name: "Gabriel Callegaro de Souza",
   oab: "OAB/RS 142.158",
