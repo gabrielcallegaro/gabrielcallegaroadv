@@ -8,6 +8,7 @@ const links = [
   { href: "#inicio", label: "Início" },
   { href: "#sobre", label: "Sobre" },
   { href: "#areas", label: "Áreas" },
+  { href: "/bancario", label: "Bancário" },
   { href: "#processo", label: "Atendimento" },
   { href: "#faq", label: "FAQ" },
   { href: "/blog", label: "Blog" },
@@ -18,10 +19,10 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const solid = scrolled || pathname.startsWith("/blog");
-  const isBlog = pathname.startsWith("/blog");
+  const isSubpage = pathname.startsWith("/blog") || pathname.startsWith("/bancario");
+  const solid = scrolled || isSubpage;
   const resolveHref = (href: string) => {
-    if (href.startsWith("#")) return isBlog ? `/${href}` : href;
+    if (href.startsWith("#")) return isSubpage ? `/${href}` : href;
     return href;
   };
 
