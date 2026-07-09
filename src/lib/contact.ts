@@ -10,6 +10,11 @@ export const WHATSAPP_MESSAGE_BANCARIO = encodeURIComponent(
 );
 export const WHATSAPP_URL_BANCARIO = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE_BANCARIO}`;
 
+export const WHATSAPP_MESSAGE_PREVIDENCIARIO = encodeURIComponent(
+  "Olá, preciso de ajuda com meu benefício do INSS.",
+);
+export const WHATSAPP_URL_PREVIDENCIARIO = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE_PREVIDENCIARIO}`;
+
 export const LAWYER = {
   name: "Gabriel Callegaro de Souza",
   oab: "OAB/RS 142.158",
