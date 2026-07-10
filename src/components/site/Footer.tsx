@@ -1,6 +1,7 @@
 import { Instagram, Linkedin, Facebook, Mail } from "lucide-react";
 
 import { LAWYER, WHATSAPP_URL } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 import logoGc from "@/assets/logo-gc.png.asset.json";
 
 const links = [

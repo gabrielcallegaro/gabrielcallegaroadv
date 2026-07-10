@@ -1,4 +1,5 @@
 import { WHATSAPP_URL } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (

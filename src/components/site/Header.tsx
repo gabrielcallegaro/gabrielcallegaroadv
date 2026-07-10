@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useRouterState } from "@tanstack/react-router";
 import { WHATSAPP_URL } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 import logoGc from "@/assets/logo-gc.png.asset.json";
 
 const links = [

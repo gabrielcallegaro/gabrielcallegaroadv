@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, MessageCircle, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-justice.jpg";
 import { WHATSAPP_URL, LAWYER } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function Hero() {
   const [city, setCity] = useState<string | null>(null);

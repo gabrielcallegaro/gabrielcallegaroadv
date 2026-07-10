@@ -1,5 +1,6 @@
 import { MessageCircle, ArrowRight } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function FinalCTA() {
   return (

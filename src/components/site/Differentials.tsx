@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const items = [
   "Atendimento personalizado",
