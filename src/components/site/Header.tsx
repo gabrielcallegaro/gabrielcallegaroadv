@@ -60,14 +60,14 @@ export function Header() {
           ))}
         </nav>
 
-        <a
+        <WhatsAppLink
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center rounded gradient-red px-5 py-2.5 text-sm font-semibold text-white shadow-elegant hover:shadow-glow transition-smooth"
         >
           Falar Agora
-        </a>
+        </WhatsAppLink>
 
         <button
           aria-label="Abrir menu"

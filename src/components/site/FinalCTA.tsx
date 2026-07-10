@@ -27,7 +27,7 @@ export function FinalCTA() {
           inicial do seu caso.
         </p>
 
-        <a
+        <WhatsAppLink
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
@@ -36,7 +36,7 @@ export function FinalCTA() {
           <MessageCircle className="h-6 w-6" />
           Falar no WhatsApp
           <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-        </a>
+        </WhatsAppLink>
 
         <div className="mt-8 text-sm text-white/50">
           Atendimento online e presencial — Rio Grande do Sul
