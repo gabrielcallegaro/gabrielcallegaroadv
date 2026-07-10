@@ -91,14 +91,14 @@ export function Header() {
                 {l.label}
               </a>
             ))}
-            <a
+            <WhatsAppLink
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 text-center rounded gradient-red px-5 py-3 font-semibold text-white"
             >
               Falar no WhatsApp
-            </a>
+            </WhatsAppLink>
           </nav>
         </div>
       )}
