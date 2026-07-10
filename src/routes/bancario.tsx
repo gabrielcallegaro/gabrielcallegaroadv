@@ -14,6 +14,7 @@ import { Differentials } from "@/components/site/Differentials";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+import { WhatsAppLink } from "@/components/site/WhatsAppLink";
 import { useReveal } from "@/hooks/use-reveal";
 import { WHATSAPP_URL_BANCARIO, LAWYER } from "@/lib/contact";
 import heroImg from "@/assets/hero-justice.jpg";
