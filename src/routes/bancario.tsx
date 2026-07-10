@@ -14,6 +14,7 @@ import { Differentials } from "@/components/site/Differentials";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+import { WhatsAppLink } from "@/components/site/WhatsAppLink";
 import { useReveal } from "@/hooks/use-reveal";
 import { WHATSAPP_URL_BANCARIO, LAWYER } from "@/lib/contact";
 import heroImg from "@/assets/hero-justice.jpg";
@@ -183,7 +184,7 @@ function BancarioPage() {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a
+              <WhatsAppLink
                 href={WHATSAPP_URL_BANCARIO}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -193,7 +194,7 @@ function BancarioPage() {
                 <MessageCircle className="h-5 w-5" />
                 Falar pelo WhatsApp
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </WhatsAppLink>
               <a
                 href="#contato-bancario"
                 className="inline-flex items-center justify-center rounded border border-white/25 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur transition-smooth hover:bg-white/10"
@@ -351,7 +352,7 @@ function BancarioPage() {
             trabalhista e receba uma análise inicial do seu caso.
           </p>
 
-          <a
+          <WhatsAppLink
             href={WHATSAPP_URL_BANCARIO}
             target="_blank"
             rel="noopener noreferrer"
@@ -360,7 +361,7 @@ function BancarioPage() {
             <MessageCircle className="h-6 w-6" />
             Falar no WhatsApp
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </a>
+          </WhatsAppLink>
 
           <div className="mt-8 text-sm text-white/50">
             Atendimento online e presencial — Rio Grande do Sul

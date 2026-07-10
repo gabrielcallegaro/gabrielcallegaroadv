@@ -1,4 +1,5 @@
 import { WHATSAPP_URL } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -16,7 +17,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export function WhatsAppFloat({ href = WHATSAPP_URL }: { href?: string } = {}) {
   return (
-    <a
+    <WhatsAppLink
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -26,6 +27,6 @@ export function WhatsAppFloat({ href = WHATSAPP_URL }: { href?: string } = {}) {
     >
       <WhatsAppIcon className="h-6 w-6" />
       <span className="hidden sm:inline font-semibold">WhatsApp</span>
-    </a>
+    </WhatsAppLink>
   );
 }

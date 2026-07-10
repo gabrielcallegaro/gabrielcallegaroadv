@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useRouterState } from "@tanstack/react-router";
 import { WHATSAPP_URL } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 import logoGc from "@/assets/logo-gc.png.asset.json";
 
 const links = [
@@ -59,14 +60,14 @@ export function Header() {
           ))}
         </nav>
 
-        <a
+        <WhatsAppLink
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center rounded gradient-red px-5 py-2.5 text-sm font-semibold text-white shadow-elegant hover:shadow-glow transition-smooth"
         >
           Falar Agora
-        </a>
+        </WhatsAppLink>
 
         <button
           aria-label="Abrir menu"
@@ -90,14 +91,14 @@ export function Header() {
                 {l.label}
               </a>
             ))}
-            <a
+            <WhatsAppLink
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 text-center rounded gradient-red px-5 py-3 font-semibold text-white"
             >
               Falar no WhatsApp
-            </a>
+            </WhatsAppLink>
           </nav>
         </div>
       )}

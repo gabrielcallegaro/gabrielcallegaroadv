@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, MessageCircle, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-justice.jpg";
 import { WHATSAPP_URL, LAWYER } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function Hero() {
   const [city, setCity] = useState<string | null>(null);
@@ -69,7 +70,7 @@ export function Hero() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <a
+            <WhatsAppLink
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -79,7 +80,7 @@ export function Hero() {
               <MessageCircle className="h-5 w-5" />
               Falar pelo WhatsApp
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </WhatsAppLink>
             <a
               href="#contato"
               className="inline-flex items-center justify-center rounded border border-white/25 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur transition-smooth hover:bg-white/10"

@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const items = [
   "Atendimento personalizado",
@@ -27,14 +28,14 @@ export function Differentials() {
             humana. Trabalho lado a lado com cada cliente — sem terceirizações,
             sem respostas genéricas.
           </p>
-          <a
+          <WhatsAppLink
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center rounded gradient-red px-7 py-3.5 font-semibold text-white shadow-elegant hover:shadow-glow transition-smooth"
           >
             Quero conversar sobre meu caso
-          </a>
+          </WhatsAppLink>
         </div>
 
         <ul className="space-y-3 reveal">

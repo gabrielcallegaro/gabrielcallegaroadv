@@ -1,6 +1,7 @@
 import { Instagram, Linkedin, Facebook, Mail } from "lucide-react";
 
 import { LAWYER, WHATSAPP_URL } from "@/lib/contact";
+import { WhatsAppLink } from "./WhatsAppLink";
 import logoGc from "@/assets/logo-gc.png.asset.json";
 
 const links = [
@@ -42,14 +43,14 @@ export function Footer() {
 
         <div>
           <h3 className="font-display text-white text-base font-semibold">Contato</h3>
-          <a
+          <WhatsAppLink
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex items-center rounded gradient-red px-5 py-2.5 text-sm font-semibold text-white"
           >
             Falar no WhatsApp
-          </a>
+          </WhatsAppLink>
           <div className="mt-6 flex gap-3">
             {[
               { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gabrielcallegaro.adv" },
