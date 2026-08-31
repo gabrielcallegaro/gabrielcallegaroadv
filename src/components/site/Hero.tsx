@@ -37,10 +37,13 @@ export function Hero() {
     >
       <img
         src={heroImg}
+        srcSet={`${heroImgMobile} 828w, ${heroImgTablet} 1280w, ${heroImg} 1920w`}
+        sizes="100vw"
         alt="Advogado trabalhista no Rio Grande do Sul — defesa dos direitos do trabalhador"
         width={1920}
         height={1080}
         fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover opacity-40"
       />
       <div
