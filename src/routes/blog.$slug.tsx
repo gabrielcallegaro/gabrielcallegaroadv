@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
-import { getPostBySlug, posts } from "@/content/blog";
+import { getPostBySlug, posts, type BlogPost } from "@/content/blog";
 
 export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => {
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/blog/$slug")({
       ],
     };
   },
-  loader: ({ params }) => {
+  loader: ({ params }): { post: BlogPost } => {
     const post = getPostBySlug(params.slug);
     if (!post) throw notFound();
     return { post };
@@ -73,7 +73,8 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function PostPage() {
-  const { post } = Route.useLoaderData();
+  const { slug } = Route.useParams();
+  const post = getPostBySlug(slug)!;
   return (
     <main className="bg-white min-h-screen">
       <Header />

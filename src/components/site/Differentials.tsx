@@ -8,7 +8,7 @@ const items = [
   "Comunicação rápida e direta",
   "Estratégia jurídica individualizada",
   "Atendimento online e presencial",
-  "Compromisso com resultados",
+  "Dedicação integral a cada caso",
 ];
 
 export function Differentials() {
