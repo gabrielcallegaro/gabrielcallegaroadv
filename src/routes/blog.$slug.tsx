@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, useLoaderData } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
@@ -73,7 +73,7 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function PostPage() {
-  const { post } = Route.useLoaderData();
+  const { post } = useLoaderData({ from: "/blog/$slug" });
   return (
     <main className="bg-white min-h-screen">
       <Header />
