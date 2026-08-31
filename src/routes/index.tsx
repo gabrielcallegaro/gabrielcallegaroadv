@@ -49,7 +49,17 @@ export const Route = createFileRoute("/")({
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: SITE_URL + "/" }],
+    links: [
+      { rel: "canonical", href: SITE_URL + "/" },
+      {
+        rel: "preload",
+        as: "image",
+        href: heroImg,
+        imageSrcSet: `${heroImgMobile} 828w, ${heroImgTablet} 1280w, ${heroImg} 1920w`,
+        imageSizes: "100vw",
+        fetchPriority: "high",
+      },
+    ],
     scripts: [
       {
         type: "application/ld+json",
