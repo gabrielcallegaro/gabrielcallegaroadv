@@ -42,7 +42,7 @@ export const Route = createFileRoute("/blog/$slug")({
       ],
     };
   },
-  loader: ({ params }) => {
+  loader: ({ params }): { post: BlogPost } => {
     const post = getPostBySlug(params.slug);
     if (!post) throw notFound();
     return { post };
