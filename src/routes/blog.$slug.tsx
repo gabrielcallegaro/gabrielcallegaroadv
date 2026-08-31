@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
-import { getPostBySlug, posts } from "@/content/blog";
+import { getPostBySlug, posts, type BlogPost } from "@/content/blog";
 
 export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => {
