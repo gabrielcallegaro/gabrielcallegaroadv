@@ -73,7 +73,8 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function PostPage() {
-  const { post } = useLoaderData({ from: "/blog/$slug" });
+  const { slug } = Route.useParams();
+  const post = getPostBySlug(slug)!;
   return (
     <main className="bg-white min-h-screen">
       <Header />
