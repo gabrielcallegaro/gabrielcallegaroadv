@@ -1,4 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import heroImgMobile from "@/assets/hero-justice-828.jpg";
+import heroImgTablet from "@/assets/hero-justice-1280.jpg";
+import heroImg from "@/assets/hero-justice.jpg";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
