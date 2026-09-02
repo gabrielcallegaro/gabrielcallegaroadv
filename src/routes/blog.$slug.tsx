@@ -82,7 +82,10 @@ function PostPage() {
     if (!(target instanceof Element)) return;
     const link = target.closest("a");
     if (!link?.href.includes("wa.me")) return;
-    window.dataLayer?.push({ event: "whatsapp_click" });
+    const trackingWindow = window as Window & {
+      dataLayer?: Array<Record<string, string>>;
+    };
+    trackingWindow.dataLayer?.push({ event: "whatsapp_click" });
   };
 
   return (
