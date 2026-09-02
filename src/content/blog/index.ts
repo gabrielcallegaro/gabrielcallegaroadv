@@ -14,10 +14,15 @@ import rescisaoIndireta from "./rescisao-indireta.ts";
 import reconhecimentoVinculo from "./reconhecimento-vinculo.ts";
 import estabilidadeGestante from "./estabilidade-gestante.ts";
 import insalubridadePericulosidade from "./insalubridade-periculosidade.ts";
+import direitosNaDemissao from "./direitos-na-demissao.ts";
 
-export const posts: BlogPost[] = [rescisaoIndireta, reconhecimentoVinculo, estabilidadeGestante, insalubridadePericulosidade].sort((a, b) =>
-  b.date.localeCompare(a.date),
-);
+export const posts: BlogPost[] = [
+  rescisaoIndireta,
+  reconhecimentoVinculo,
+  estabilidadeGestante,
+  insalubridadePericulosidade,
+  direitosNaDemissao,
+].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return posts.find((p) => p.slug === slug);
