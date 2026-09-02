@@ -1,6 +1,6 @@
 import type { BlogPost } from "./index";
 import img1 from "@/assets/direitos-demissao-documentos.jpg.asset.json";
-import img2 from "@/assets/direitos-demissao-calculo.jpg.asset.json";
+import img2 from "@/assets/direitos-demissao-calculo-limpo.jpg";
 import { WHATSAPP_URL } from "@/lib/contact";
 
 const post: BlogPost = {
@@ -74,7 +74,7 @@ const post: BlogPost = {
     <p>A empresa tem até <strong>10 dias corridos após o término do contrato</strong> para pagar as verbas rescisórias e entregar os documentos necessários, como o termo de rescisão e, quando cabíveis, as guias do FGTS e do seguro-desemprego.</p>
     <p>O atraso pode gerar a multa prevista no artigo 477 da CLT, em valor equivalente ao salário do trabalhador, consideradas as circunstâncias do caso.</p>
 
-    <img src="${img2.url}" alt="Conferência dos cálculos e das verbas rescisórias de uma demissão" loading="lazy" width="1280" height="720" />
+    <img src="${img2}" alt="Conferência dos cálculos e das verbas rescisórias de uma demissão" loading="lazy" width="1280" height="720" />
 
     <h2>Quanto tempo tenho para cobrar meus direitos?</h2>
     <p>Depois do fim do contrato, o trabalhador tem até <strong>dois anos</strong> para ajuizar uma ação trabalhista. Dentro desse prazo, em regra, pode cobrar créditos referentes aos cinco anos anteriores ao ajuizamento.</p>
