@@ -65,7 +65,7 @@ export function About({ variant = "trabalhista" }: AboutProps) {
             </div>
           </div>
 
-          <div className="mt-8 ml-0 self-start inline-flex items-center gap-4 rounded-lg border border-[var(--border)] bg-[var(--muted)] px-5 py-3">
+          <div className="mt-8 ml-0 inline-flex lg:flex lg:w-fit lg:mx-auto items-center gap-4 rounded-lg border border-[var(--border)] bg-[var(--muted)] px-5 py-3">
             <div className="h-11 w-11 grid place-items-center rounded gradient-red text-white font-display text-lg font-bold">
               GC
             </div>
