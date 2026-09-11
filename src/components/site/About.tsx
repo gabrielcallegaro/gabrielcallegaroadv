@@ -54,27 +54,14 @@ export function About({ variant = "trabalhista" }: AboutProps) {
           <div className="mt-8 flex flex-col sm:flex-row sm:items-start gap-6">
             <img
               src={portrait.url}
-              alt="Gabriel Callegaro de Souza, advogado trabalhista OAB/RS 142.158"
+              alt={c.alt}
               loading="lazy"
               className="h-48 w-40 flex-shrink-0 rounded-lg object-cover shadow-elegant ring-1 ring-[var(--border)]"
             />
             <div className="space-y-4 text-[var(--brand-charcoal)] leading-relaxed">
-              <p>
-                Advogado dedicado integralmente ao Direito do Trabalho, Gabriel
-                Callegaro de Souza atua na defesa de trabalhadores em todo o
-                Rio Grande do Sul, com foco em resultados justos e na correta
-                reparação dos direitos violados.
-              </p>
-              <p>
-                Cada caso é tratado com profundidade técnica, escuta atenta e
-                uma estratégia personalizada — porque por trás de cada processo
-                existe uma história, uma família e uma trajetória profissional
-                que merecem respeito.
-              </p>
-              <p>
-                Atendimento online e presencial, comunicação direta e
-                transparente do início ao fim.
-              </p>
+              {c.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
           </div>
 
