@@ -125,6 +125,7 @@ function Index() {
     <main className="bg-white">
       <Header />
       <Hero />
+      <AudienceCards />
       <PracticeAreas />
       <About />
       <Process />
@@ -135,7 +136,7 @@ function Index() {
       <FinalCTA />
       <Footer />
       <WhatsAppFloat />
-
     </main>
   );
 }
+
