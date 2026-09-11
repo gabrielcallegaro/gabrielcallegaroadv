@@ -77,7 +77,7 @@ export function About({ variant = "trabalhista" }: AboutProps) {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-5 reveal">
-          {pillars.map((p) => (
+          {c.pillars.map((p) => (
             <div
               key={p.title}
               className="hover-lift rounded-lg border border-[var(--border)] bg-white p-6 shadow-card"
