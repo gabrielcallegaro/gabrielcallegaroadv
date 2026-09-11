@@ -1,5 +1,5 @@
 const stats = [
-  { value: "+2 mil", label: "causas trabalhistas conduzidas" },
+  { value: "+2 mil", label: "Causas trabalhistas conduzidas" },
   { value: "100%", label: "Atendimento digital" },
   { value: "Sem custo", label: "Honorário só no êxito" },
 ];
@@ -14,7 +14,7 @@ export function HeroStats() {
               <div className="font-display text-3xl font-semibold text-[var(--brand-wine)] sm:text-4xl">
                 {s.value}
               </div>
-              <div className="mt-1 text-[10px] tracking-[0.2em] text-white/60">
+              <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/60">
                 {s.label}
               </div>
             </div>

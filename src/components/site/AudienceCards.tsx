@@ -29,8 +29,8 @@ export function AudienceCards() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl reveal">
           <h2 className="font-display text-4xl leading-tight text-[var(--brand-dark)] sm:text-5xl">
-            Advogado que{" "}
-            <span className="italic text-[var(--brand-wine)]">entende você</span>.
+            Advogados que{" "}
+            <span className="italic text-[var(--brand-wine)]">entendem você</span>.
           </h2>
           <p className="mt-5 leading-relaxed text-[var(--brand-charcoal)]">
             Sem termos complicados, sem enrolação. Atuamos exclusivamente na defesa de
