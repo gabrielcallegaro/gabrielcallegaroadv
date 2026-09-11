@@ -4,6 +4,7 @@ import heroImgTablet from "@/assets/hero-justice-1280.jpg";
 import heroImg from "@/assets/hero-justice.jpg";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
+import { AudienceCards } from "@/components/site/AudienceCards";
 import { About } from "@/components/site/About";
 import { PracticeAreas } from "@/components/site/PracticeAreas";
 import { Process } from "@/components/site/Process";
@@ -15,6 +16,7 @@ import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { LatestPosts } from "@/components/site/LatestPosts";
 import { useReveal } from "@/hooks/use-reveal";
+
 
 const TITLE = "Advogado Trabalhista no Rio Grande do Sul | Gabriel Callegaro";
 const DESCRIPTION =

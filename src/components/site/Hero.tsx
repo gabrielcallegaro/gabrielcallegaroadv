@@ -5,6 +5,8 @@ import heroImgMobile from "@/assets/hero-justice-828.jpg";
 import heroImgTablet from "@/assets/hero-justice-1280.jpg";
 import { WHATSAPP_URL, LAWYER } from "@/lib/contact";
 import { WhatsAppLink } from "./WhatsAppLink";
+import { HeroStats } from "./HeroStats";
+
 
 export function Hero() {
   const [city, setCity] = useState<string | null>(null);
