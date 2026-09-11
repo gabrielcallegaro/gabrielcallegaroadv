@@ -1,5 +1,5 @@
 const stats = [
-  { value: "+3 mil", label: "Causas trabalhistas conduzidas" },
+  { value: "+2 mil", label: "Causas trabalhistas conduzidas" },
   { value: "100%", label: "Atendimento digital" },
   { value: "Sem custo", label: "Honorário só no êxito" },
 ];
