@@ -289,7 +289,7 @@ function PrevidenciaPage() {
         </div>
       </section>
 
-      <About />
+      <About variant="previdenciario" />
       <Process />
       <Differentials />
 

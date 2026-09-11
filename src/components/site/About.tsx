@@ -2,14 +2,43 @@ import { ShieldCheck, Handshake, Target, Eye } from "lucide-react";
 import { LAWYER } from "@/lib/contact";
 import portrait from "@/assets/gabriel-callegaro.jpg.asset.json";
 
-const pillars = [
-  { icon: Handshake, title: "Atendimento Humanizado", text: "Escuta atenta e linguagem clara em cada etapa." },
-  { icon: Target, title: "Atuação Estratégica", text: "Análise profunda e decisões fundamentadas para cada caso." },
-  { icon: Eye, title: "Transparência Total", text: "Acompanhamento próximo, sem promessas vazias." },
-  { icon: ShieldCheck, title: "Defesa dos Direitos", text: "Compromisso integral com a justiça trabalhista." },
-];
+interface AboutProps {
+  variant?: "trabalhista" | "previdenciario";
+}
 
-export function About() {
+const content = {
+  trabalhista: {
+    alt: "Gabriel Callegaro de Souza, advogado trabalhista OAB/RS 142.158",
+    paragraphs: [
+      "Advogado dedicado integralmente ao Direito do Trabalho, Gabriel Callegaro de Souza atua na defesa de trabalhadores em todo o Rio Grande do Sul, com foco em resultados justos e na correta reparação dos direitos violados.",
+      "Cada caso é tratado com profundidade técnica, escuta atenta e uma estratégia personalizada — porque por trás de cada processo existe uma história, uma família e uma trajetória profissional que merecem respeito.",
+      "Atendimento online e presencial, comunicação direta e transparente do início ao fim.",
+    ],
+    pillars: [
+      { icon: Handshake, title: "Atendimento Humanizado", text: "Escuta atenta e linguagem clara em cada etapa." },
+      { icon: Target, title: "Atuação Estratégica", text: "Análise profunda e decisões fundamentadas para cada caso." },
+      { icon: Eye, title: "Transparência Total", text: "Acompanhamento próximo, sem promessas vazias." },
+      { icon: ShieldCheck, title: "Defesa dos Direitos", text: "Compromisso integral com a justiça trabalhista." },
+    ],
+  },
+  previdenciario: {
+    alt: "Gabriel Callegaro de Souza, advogado previdenciário OAB/RS 142.158",
+    paragraphs: [
+      "Advogado com atuação especializada na área Previdenciária, Gabriel Callegaro de Souza acompanha segurados do INSS em todo o Rio Grande do Sul, com foco no reconhecimento correto de aposentadorias, auxílios e demais benefícios.",
+      "Cada caso é analisado com atenção ao histórico contributivo, documentação previdenciária e legislação aplicável — porque por trás de cada benefício existe uma história de vida, uma família e um projeto de futuro que merecem respeito.",
+      "Atendimento online e presencial, comunicação direta e transparente do início ao fim.",
+    ],
+    pillars: [
+      { icon: Handshake, title: "Atendimento Humanizado", text: "Escuta atenta e linguagem clara em cada etapa." },
+      { icon: Target, title: "Atuação Estratégica", text: "Análise do CNIS, regras de transição e melhor cenário previdenciário." },
+      { icon: Eye, title: "Transparência Total", text: "Acompanhamento próximo, sem promessas vazias." },
+      { icon: ShieldCheck, title: "Defesa dos Direitos", text: "Compromisso integral com a justiça previdenciária." },
+    ],
+  },
+};
+
+export function About({ variant = "trabalhista" }: AboutProps) {
+  const c = content[variant];
   return (
     <section id="sobre" className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
@@ -25,27 +54,14 @@ export function About() {
           <div className="mt-8 flex flex-col sm:flex-row sm:items-start gap-6">
             <img
               src={portrait.url}
-              alt="Gabriel Callegaro de Souza, advogado trabalhista OAB/RS 142.158"
+              alt={c.alt}
               loading="lazy"
               className="h-48 w-40 flex-shrink-0 rounded-lg object-cover shadow-elegant ring-1 ring-[var(--border)]"
             />
             <div className="space-y-4 text-[var(--brand-charcoal)] leading-relaxed">
-              <p>
-                Advogado dedicado integralmente ao Direito do Trabalho, Gabriel
-                Callegaro de Souza atua na defesa de trabalhadores em todo o
-                Rio Grande do Sul, com foco em resultados justos e na correta
-                reparação dos direitos violados.
-              </p>
-              <p>
-                Cada caso é tratado com profundidade técnica, escuta atenta e
-                uma estratégia personalizada — porque por trás de cada processo
-                existe uma história, uma família e uma trajetória profissional
-                que merecem respeito.
-              </p>
-              <p>
-                Atendimento online e presencial, comunicação direta e
-                transparente do início ao fim.
-              </p>
+              {c.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
           </div>
 
@@ -61,7 +77,7 @@ export function About() {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-5 reveal">
-          {pillars.map((p) => (
+          {c.pillars.map((p) => (
             <div
               key={p.title}
               className="hover-lift rounded-lg border border-[var(--border)] bg-white p-6 shadow-card"
