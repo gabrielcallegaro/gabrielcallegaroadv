@@ -1,3 +1,3 @@
 # Roadmap
 
-- [ ] Arredondar e refinar visualmente os botões do site.
+- [x] Arredondar e refinar visualmente os botões do site.
