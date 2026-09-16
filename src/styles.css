@@ -1,8 +1,8 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import "@fontsource-variable/inter/wght.css";
-@import "@fontsource-variable/playfair-display/wght.css";
+@import "@fontsource-variable/inter/latin-wght.css";
+@import "@fontsource-variable/playfair-display/latin-wght.css";
 
 @custom-variant dark (&:is(.dark *));
 
