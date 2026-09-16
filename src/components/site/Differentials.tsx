@@ -13,7 +13,7 @@ const items = [
 
 export function Differentials() {
   return (
-    <section className="py-24 bg-[var(--muted)]">
+    <section className="bg-secondary py-24">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="reveal">
           <span className="text-xs uppercase tracking-[0.25em] text-brand-red font-semibold">
@@ -42,7 +42,7 @@ export function Differentials() {
           {items.map((it, i) => (
             <li
               key={it}
-              className="flex items-center gap-4 rounded-lg border border-[var(--border)] bg-white px-5 py-4 shadow-card hover-lift"
+              className="flex items-center gap-4 rounded-lg border border-border bg-card px-5 py-4 shadow-card hover-lift"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <CheckCircle2 className="h-6 w-6 text-brand-red shrink-0" />

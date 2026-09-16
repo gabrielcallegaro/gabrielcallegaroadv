@@ -83,10 +83,10 @@
   /* Vermelho vinho #A61B1B */
   --primary-glow: oklch(0.5 0.2 27);
 
-  /* Preto / cinza escuro */
-  --secondary: oklch(0.22 0.005 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.96 0.003 0);
+  /* Superfícies claras e texto grafite */
+  --secondary: oklch(0.965 0.008 25);
+  --secondary-foreground: oklch(0.24 0.015 25);
+  --muted: oklch(0.975 0.006 25);
   --muted-foreground: oklch(0.45 0.01 0);
   --accent: oklch(0.42 0.18 27);
   --accent-foreground: oklch(0.985 0 0);
@@ -98,19 +98,20 @@
   --ring: oklch(0.42 0.18 27);
 
   /* Brand tokens */
-  --brand-dark: oklch(0.18 0.005 0);     /* #111 */
-  --brand-darker: oklch(0.13 0.005 0);
-  --brand-charcoal: oklch(0.26 0.005 0); /* #222 */
+  --brand-dark: oklch(0.24 0.012 25);
+  --brand-darker: oklch(0.19 0.014 25);
+  --brand-charcoal: oklch(0.34 0.012 25);
   --brand-red: oklch(0.42 0.18 27);      /* #8B0000 */
   --brand-wine: oklch(0.5 0.2 27);       /* #A61B1B */
   --whatsapp: oklch(0.65 0.18 145);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.13 0.005 0) 0%, oklch(0.18 0.005 0) 45%, oklch(0.32 0.13 27) 100%);
+  --gradient-hero: linear-gradient(105deg, oklch(1 0 0 / 0.98) 0%, oklch(0.985 0.008 25 / 0.94) 48%, oklch(1 0 0 / 0.18) 100%);
+  --gradient-section: radial-gradient(circle at 15% 0%, oklch(0.5 0.2 27 / 0.08), transparent 42%), radial-gradient(circle at 90% 100%, oklch(0.42 0.18 27 / 0.06), transparent 38%);
   --gradient-red: linear-gradient(135deg, var(--brand-red), var(--brand-wine));
   --gradient-dark: linear-gradient(180deg, var(--brand-darker), var(--brand-dark));
 
   --shadow-elegant: 0 20px 60px -20px oklch(0.42 0.18 27 / 0.35);
-  --shadow-card: 0 10px 30px -15px oklch(0 0 0 / 0.15);
+  --shadow-card: 0 12px 34px -18px oklch(0.32 0.08 27 / 0.18);
   --shadow-glow: 0 0 40px oklch(0.5 0.2 27 / 0.4);
 
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -192,6 +193,7 @@
 
 @layer utilities {
   .bg-hero { background: var(--gradient-hero); }
+  .bg-section-accent { background-image: var(--gradient-section); }
   .bg-brand-dark { background: var(--brand-dark); }
   .bg-brand-darker { background: var(--brand-darker); }
   .bg-brand-red { background: var(--brand-red); }

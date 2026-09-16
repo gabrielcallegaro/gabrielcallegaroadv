@@ -40,7 +40,7 @@ const content = {
 export function About({ variant = "trabalhista" }: AboutProps) {
   const c = content[variant];
   return (
-    <section id="sobre" className="py-24 bg-white">
+    <section id="sobre" className="bg-background py-24">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="reveal">
           <span className="text-xs uppercase tracking-[0.25em] text-brand-red font-semibold">
@@ -80,7 +80,7 @@ export function About({ variant = "trabalhista" }: AboutProps) {
           {c.pillars.map((p) => (
             <div
               key={p.title}
-              className="hover-lift rounded-lg border border-[var(--border)] bg-white p-6 shadow-card"
+              className="hover-lift rounded-lg border border-border bg-card p-6 shadow-card"
             >
               <div className="h-11 w-11 grid place-items-center rounded gradient-red text-white">
                 <p.icon className="h-5 w-5" />

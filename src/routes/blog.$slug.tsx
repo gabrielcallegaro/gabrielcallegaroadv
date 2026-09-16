@@ -48,7 +48,7 @@ export const Route = createFileRoute("/blog/$slug")({
     return { post };
   },
   notFoundComponent: () => (
-    <main className="bg-white min-h-screen">
+    <main className="min-h-screen bg-background">
       <Header />
       <section className="pt-40 pb-20 text-center px-6">
         <h1 className="font-display text-3xl">Artigo não encontrado</h1>
@@ -60,7 +60,7 @@ export const Route = createFileRoute("/blog/$slug")({
     </main>
   ),
   errorComponent: ({ error }) => (
-    <main className="bg-white min-h-screen">
+    <main className="min-h-screen bg-background">
       <Header />
       <section className="pt-40 pb-20 text-center px-6">
         <h1 className="font-display text-3xl">Erro ao carregar artigo</h1>
@@ -89,7 +89,7 @@ function PostPage() {
   };
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="min-h-screen bg-background">
       <Header />
       <article className="pt-32 pb-20">
         <div className="mx-auto max-w-3xl px-6">

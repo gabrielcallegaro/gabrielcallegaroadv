@@ -7,7 +7,7 @@ export function LatestPosts() {
   if (recent.length === 0) return null;
 
   return (
-    <section id="artigos" className="py-24 bg-white">
+    <section id="artigos" className="bg-background py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center max-w-2xl mx-auto reveal">
           <span className="text-xs uppercase tracking-[0.25em] text-brand-red font-semibold">
@@ -25,7 +25,7 @@ export function LatestPosts() {
               key={p.slug}
               to="/blog/$slug"
               params={{ slug: p.slug }}
-              className="reveal group flex flex-col rounded-lg border border-[var(--border)] bg-white p-6 shadow-card hover-lift"
+              className="reveal group flex flex-col rounded-lg border border-border bg-card p-6 shadow-card hover-lift"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <p className="text-xs uppercase tracking-wider text-[var(--muted-foreground)]">

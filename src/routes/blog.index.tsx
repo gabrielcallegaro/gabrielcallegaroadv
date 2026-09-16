@@ -23,7 +23,7 @@ export const Route = createFileRoute("/blog/")({
 
 function BlogIndex() {
   return (
-    <main className="bg-white min-h-screen">
+    <main className="min-h-screen bg-background">
       <Header />
       <section className="pt-32 pb-20">
         <div className="mx-auto max-w-4xl px-6">
@@ -40,7 +40,7 @@ function BlogIndex() {
                 key={p.slug}
                 to="/blog/$slug"
                 params={{ slug: p.slug }}
-                className="block rounded-lg border border-neutral-200 p-6 hover:border-[var(--brand-wine)] hover:shadow-elegant transition-smooth"
+                className="block rounded-lg border border-border bg-card p-6 shadow-card hover:border-primary/30 hover:shadow-elegant transition-smooth"
               >
                 <p className="text-xs uppercase tracking-wider text-neutral-500">
                   {new Date(p.date).toLocaleDateString("pt-BR", {
