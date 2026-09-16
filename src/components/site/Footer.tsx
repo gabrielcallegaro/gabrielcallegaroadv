@@ -25,7 +25,7 @@ export function Footer() {
             {LAWYER.name} — Advogado dedicado ao Direito do Trabalho no Rio
             Grande do Sul.
           </p>
-          <p className="mt-3 text-sm text-[var(--brand-wine)] font-medium">{LAWYER.oab}</p>
+          <p className="mt-3 text-sm text-primary-foreground font-medium">{LAWYER.oab}</p>
         </div>
 
         <div>

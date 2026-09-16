@@ -151,30 +151,29 @@ function PrevidenciaPage() {
           width={1920}
           height={1080}
           fetchPriority="high"
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover object-[65%_center] opacity-55"
         />
         <div
           className="absolute inset-0"
           style={{
-            background:
-              "linear-gradient(90deg, oklch(0.11 0.005 0 / 0.92) 0%, oklch(0.13 0.005 0 / 0.75) 55%, oklch(0.18 0.06 27 / 0.55) 100%)",
+            background: "var(--gradient-hero)",
           }}
         />
         <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 w-full">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-white/80 backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-background/85 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-muted-foreground shadow-sm backdrop-blur">
               <MapPin className="h-3.5 w-3.5 text-[var(--brand-wine)]" aria-hidden="true" />
               Advocacia Previdenciária — Rio Grande do Sul
             </span>
 
-            <h1 className="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.05]">
+            <h1 className="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-[1.05]">
               Advogado Previdenciário no Rio Grande do Sul
-              <span className="block bg-gradient-to-r from-[var(--brand-wine)] to-white bg-clip-text text-transparent">
+              <span className="block text-primary">
                 Seu benefício do INSS foi negado ou está abaixo do valor correto?
               </span>
             </h1>
 
-            <p className="mt-6 text-lg sm:text-xl text-white/75 max-w-2xl leading-relaxed">
+            <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               Atuação técnica em aposentadoria, auxílio-doença, BPC/LOAS, pensão
               por morte e revisão de benefício. Análise cuidadosa do seu histórico
               contributivo e da negativa do INSS, com atendimento online e
@@ -195,7 +194,7 @@ function PrevidenciaPage() {
               </WhatsAppLink>
               <a
                 href="#contato-previdencia"
-                className="inline-flex items-center justify-center rounded border border-white/25 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur transition-smooth hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded border border-primary/25 bg-background/80 px-7 py-4 font-semibold text-primary backdrop-blur transition-smooth hover:bg-secondary"
               >
                 Analisar meu caso
               </a>
@@ -208,8 +207,8 @@ function PrevidenciaPage() {
                 { n: "24h", l: "Resposta Rápida" },
               ].map((s) => (
                 <div key={s.l} className="border-l-2 border-[var(--brand-wine)] pl-4">
-                  <div className="font-display text-2xl text-white font-bold">{s.n}</div>
-                  <div className="text-xs text-white/60 uppercase tracking-wider mt-1">{s.l}</div>
+                  <div className="font-display text-2xl text-foreground font-bold">{s.n}</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -218,21 +217,17 @@ function PrevidenciaPage() {
       </section>
 
       {/* Áreas Previdenciárias */}
-      <section id="areas-previdencia" className="py-24 bg-[var(--brand-dark)] relative overflow-hidden">
+      <section id="areas-previdencia" className="relative overflow-hidden bg-secondary py-24">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--brand-wine)] to-transparent opacity-70" aria-hidden="true" />
         <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 0%, oklch(0.42 0.18 27 / 0.6), transparent 50%), radial-gradient(circle at 80% 100%, oklch(0.5 0.2 27 / 0.4), transparent 50%)",
-          }}
+          className="absolute inset-0 bg-section-accent"
         />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="text-center max-w-2xl mx-auto reveal">
             <span className="text-xs uppercase tracking-[0.25em] text-[var(--brand-wine)] font-semibold">
               Áreas de Atuação
             </span>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl text-white leading-tight">
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl text-foreground leading-tight">
               Defesa dos seus direitos junto ao <span className="text-[var(--brand-wine)]">INSS</span>
             </h2>
             <div className="mt-6 h-1 w-20 gradient-red rounded mx-auto" />
@@ -242,16 +237,16 @@ function PrevidenciaPage() {
             {areas.map((a, i) => (
               <div
                 key={a.title}
-                className="reveal group rounded-lg border border-white/10 bg-white/[0.03] p-6 backdrop-blur transition-smooth hover:border-[var(--brand-wine)]/50 hover:bg-white/[0.06] hover:-translate-y-1"
+                className="reveal group rounded-lg border border-border bg-card p-6 shadow-card transition-smooth hover:-translate-y-1 hover:border-primary/30 hover:shadow-elegant"
                 style={{ transitionDelay: `${(i % 3) * 60}ms` }}
               >
                 <div className="h-12 w-12 grid place-items-center rounded gradient-red text-white shadow-elegant transition-smooth group-hover:scale-110">
                   <a.icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 font-display text-xl font-semibold text-white">
+                <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
                   {a.title}
                 </h3>
-                <p className="mt-2 text-sm text-white/65 leading-relaxed">{a.text}</p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{a.text}</p>
               </div>
             ))}
           </div>
@@ -328,25 +323,19 @@ function PrevidenciaPage() {
       <Testimonials />
 
       {/* CTA final */}
-      <section id="contato-previdencia" className="py-24 bg-[var(--brand-darker)] relative overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(circle at 50% 0%, oklch(0.5 0.2 27 / 0.35), transparent 60%)",
-          }}
-        />
+      <section id="contato-previdencia" className="relative overflow-hidden border-y border-primary/10 bg-secondary py-24">
+        <div className="absolute inset-0 bg-section-accent" />
         <div className="relative mx-auto max-w-4xl px-6 text-center reveal">
           <span className="text-xs uppercase tracking-[0.25em] text-[var(--brand-wine)] font-semibold">
             Atendimento Imediato
           </span>
-          <h2 className="mt-5 font-display text-4xl sm:text-6xl text-white leading-[1.05] font-bold">
+          <h2 className="mt-5 font-display text-4xl sm:text-6xl text-foreground leading-[1.05] font-bold">
             Benefício do INSS negado <br />
-            <span className="bg-gradient-to-r from-[var(--brand-wine)] to-white bg-clip-text text-transparent">
+            <span className="text-primary">
               ou pago abaixo do que deveria?
             </span>
           </h2>
-          <p className="mt-7 text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-7 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Envie sua situação pelo WhatsApp e receba uma análise inicial do
             seu caso previdenciário, com orientação sobre os próximos passos.
           </p>
@@ -362,7 +351,7 @@ function PrevidenciaPage() {
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </WhatsAppLink>
 
-          <div className="mt-8 text-sm text-white/50">
+          <div className="mt-8 text-sm text-muted-foreground">
             Atendimento online e presencial — Rio Grande do Sul
           </div>
         </div>
