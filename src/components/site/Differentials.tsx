@@ -32,7 +32,7 @@ export function Differentials() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center rounded gradient-red px-7 py-3.5 font-semibold text-white shadow-elegant hover:shadow-glow transition-smooth"
+            className="mt-8 inline-flex items-center rounded-full border border-white/10 gradient-red px-8 py-3.5 font-semibold text-white shadow-elegant hover:-translate-y-0.5 hover:shadow-glow active:scale-[0.98] transition-smooth"
           >
             Quero conversar sobre meu caso
           </WhatsAppLink>
