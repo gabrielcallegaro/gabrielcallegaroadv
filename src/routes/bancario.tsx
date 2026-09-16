@@ -187,7 +187,7 @@ function BancarioPage() {
                 href={WHATSAPP_URL_BANCARIO}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 rounded gradient-red px-7 py-4 font-semibold text-white shadow-elegant transition-smooth hover:shadow-glow"
+                className="group inline-flex items-center justify-center gap-2 rounded-full gradient-red px-8 py-4 font-semibold text-primary-foreground shadow-elegant transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow active:translate-y-0"
                 aria-label="Falar com advogado bancário pelo WhatsApp"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -196,7 +196,7 @@ function BancarioPage() {
               </WhatsAppLink>
               <a
                 href="#contato-bancario"
-                className="inline-flex items-center justify-center rounded border border-primary/25 bg-background/80 px-7 py-4 font-semibold text-primary backdrop-blur transition-smooth hover:bg-secondary"
+                className="inline-flex items-center justify-center rounded-full border border-primary/20 bg-background/90 px-8 py-4 font-semibold text-primary shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/35 hover:bg-background hover:shadow-card active:translate-y-0"
               >
                 Agendar Consulta
               </a>
@@ -345,7 +345,7 @@ function BancarioPage() {
             href={WHATSAPP_URL_BANCARIO}
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-10 inline-flex items-center gap-3 rounded gradient-red px-10 py-5 text-lg font-semibold text-white shadow-elegant hover:shadow-glow transition-smooth"
+            className="group mt-10 inline-flex items-center gap-3 rounded-full gradient-red px-10 py-5 text-lg font-semibold text-primary-foreground shadow-elegant transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow active:translate-y-0"
           >
             <MessageCircle className="h-6 w-6" />
             Falar no WhatsApp
