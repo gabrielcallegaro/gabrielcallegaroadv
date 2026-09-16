@@ -4,4 +4,4 @@
 - [x] Preservar conteúdo, imagens, links e rastreamento existentes.
 - [x] Validar visualmente em desktop e celular, além do funcionamento da página.
 
-- [ ] Refinar somente os botões, mantendo o site e o botão verde inalterados.
+- [x] Refinar somente os botões, mantendo o site e o botão verde inalterados.

@@ -64,7 +64,7 @@ export function Header() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center rounded gradient-red px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-elegant hover:shadow-glow transition-smooth"
+          className="hidden md:inline-flex items-center rounded-full gradient-red px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-elegant active:translate-y-0"
         >
           Falar Agora
         </WhatsAppLink>
@@ -95,7 +95,7 @@ export function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 text-center rounded gradient-red px-5 py-3 font-semibold text-primary-foreground"
+              className="mt-2 rounded-full gradient-red px-6 py-3 text-center font-semibold text-primary-foreground shadow-sm transition-all duration-300 active:scale-[0.98]"
             >
               Falar no WhatsApp
             </WhatsAppLink>
