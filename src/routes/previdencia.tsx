@@ -186,7 +186,7 @@ function PrevidenciaPage() {
                 href={WHATSAPP_URL_PREVIDENCIARIO}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button-primary group inline-flex items-center justify-center gap-2 px-7 py-4 font-semibold text-white"
+                className="group inline-flex items-center justify-center gap-2 rounded gradient-red px-7 py-4 font-semibold text-white shadow-elegant transition-smooth hover:shadow-glow"
                 aria-label="Falar com advogado previdenciário pelo WhatsApp"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -195,7 +195,7 @@ function PrevidenciaPage() {
               </WhatsAppLink>
               <a
                 href="#contato-previdencia"
-                className="button-secondary inline-flex items-center justify-center px-7 py-4 font-semibold text-white backdrop-blur"
+                className="inline-flex items-center justify-center rounded border border-white/25 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur transition-smooth hover:bg-white/10"
               >
                 Analisar meu caso
               </a>
@@ -355,7 +355,7 @@ function PrevidenciaPage() {
             href={WHATSAPP_URL_PREVIDENCIARIO}
             target="_blank"
             rel="noopener noreferrer"
-            className="button-primary group mt-10 inline-flex items-center gap-3 px-10 py-5 text-lg font-semibold text-white"
+            className="group mt-10 inline-flex items-center gap-3 rounded gradient-red px-10 py-5 text-lg font-semibold text-white shadow-elegant hover:shadow-glow transition-smooth"
           >
             <MessageCircle className="h-6 w-6" />
             Falar no WhatsApp

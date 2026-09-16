@@ -82,7 +82,7 @@ export function Hero() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button-primary group inline-flex items-center justify-center gap-2 px-7 py-4 font-semibold text-white"
+                className="group inline-flex items-center justify-center gap-2 rounded gradient-red px-7 py-4 font-semibold text-white shadow-elegant transition-smooth hover:shadow-glow"
                 aria-label="Falar com advogado trabalhista pelo WhatsApp"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -91,7 +91,7 @@ export function Hero() {
               </WhatsAppLink>
               <a
                 href="#contato"
-                className="button-secondary inline-flex items-center justify-center px-7 py-4 font-semibold text-white backdrop-blur"
+                className="inline-flex items-center justify-center rounded border border-white/25 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur transition-smooth hover:bg-white/10"
               >
                 Agendar Consulta
               </a>

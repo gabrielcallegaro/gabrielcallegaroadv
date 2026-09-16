@@ -205,42 +205,6 @@
   .transition-smooth { transition: var(--transition-smooth); }
   .font-display { font-family: var(--font-display); }
 
-  .button-primary {
-    border: 1px solid color-mix(in oklch, white 16%, transparent);
-    border-radius: 0.875rem;
-    background: var(--gradient-red);
-    box-shadow: 0 10px 28px color-mix(in oklch, var(--brand-red) 22%, transparent), inset 0 1px 0 color-mix(in oklch, white 18%, transparent);
-    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
-  }
-  .button-primary:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.06);
-    box-shadow: 0 14px 32px color-mix(in oklch, var(--brand-red) 28%, transparent), inset 0 1px 0 color-mix(in oklch, white 22%, transparent);
-  }
-  .button-primary:active { transform: translateY(0); }
-  .button-primary:focus-visible {
-    outline: 2px solid var(--brand-wine);
-    outline-offset: 3px;
-  }
-
-  .button-secondary {
-    border: 1px solid color-mix(in oklch, white 28%, transparent);
-    border-radius: 0.875rem;
-    background: color-mix(in oklch, white 7%, transparent);
-    box-shadow: inset 0 1px 0 color-mix(in oklch, white 12%, transparent);
-    transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
-  }
-  .button-secondary:hover {
-    transform: translateY(-2px);
-    border-color: color-mix(in oklch, white 45%, transparent);
-    background: color-mix(in oklch, white 12%, transparent);
-  }
-  .button-secondary:active { transform: translateY(0); }
-  .button-secondary:focus-visible {
-    outline: 2px solid var(--brand-wine);
-    outline-offset: 3px;
-  }
-
   .reveal {
     opacity: 0;
     transform: translateY(24px);
