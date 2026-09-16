@@ -31,7 +31,7 @@ export function FinalCTA() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-10 inline-flex items-center gap-3 rounded gradient-red px-10 py-5 text-lg font-semibold text-white shadow-elegant hover:shadow-glow transition-smooth"
+          className="group mt-10 inline-flex items-center gap-3 rounded-full border border-white/10 gradient-red px-10 py-5 text-lg font-semibold text-white shadow-elegant hover:-translate-y-0.5 hover:shadow-glow active:scale-[0.98] transition-smooth"
         >
           <MessageCircle className="h-6 w-6" />
           Falar no WhatsApp
