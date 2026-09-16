@@ -115,7 +115,7 @@ export function Hero() {
 
       <HeroStats />
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs uppercase tracking-widest text-white/40">
+      <div className="relative z-10 w-full bg-[var(--brand-darker)] py-3 text-center text-xs uppercase tracking-widest text-white/40">
         Role para descobrir
       </div>
     </section>
