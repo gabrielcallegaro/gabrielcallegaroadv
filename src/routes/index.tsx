@@ -122,7 +122,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   useReveal();
   return (
-    <main className="bg-background">
+    <main className="bg-white">
       <Header />
       <Hero />
       <AudienceCards />

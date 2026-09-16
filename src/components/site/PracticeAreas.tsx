@@ -20,10 +20,14 @@ const areas = [
 
 export function PracticeAreas() {
   return (
-    <section id="areas" className="relative overflow-hidden bg-secondary py-24">
+    <section id="areas" className="py-24 bg-[var(--brand-dark)] relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--brand-wine)] to-transparent opacity-70" aria-hidden="true" />
       <div
-        className="absolute inset-0 bg-section-accent"
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 0%, oklch(0.42 0.18 27 / 0.6), transparent 50%), radial-gradient(circle at 80% 100%, oklch(0.5 0.2 27 / 0.4), transparent 50%)",
+        }}
       />
 
       <div className="relative mx-auto max-w-7xl px-6">
@@ -31,7 +35,7 @@ export function PracticeAreas() {
           <span className="text-xs uppercase tracking-[0.25em] text-[var(--brand-wine)] font-semibold">
             Áreas de Atuação
           </span>
-           <h2 className="mt-4 font-display text-4xl sm:text-5xl text-foreground leading-tight">
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl text-white leading-tight">
             Defesa especializada em <span className="text-[var(--brand-wine)]">todas as frentes</span> do Direito do Trabalho
           </h2>
           <div className="mt-6 h-1 w-20 gradient-red rounded mx-auto" />
@@ -41,16 +45,16 @@ export function PracticeAreas() {
           {areas.map((a, i) => (
             <div
               key={a.title}
-              className="reveal group rounded-lg border border-border bg-card p-6 shadow-card transition-smooth hover:-translate-y-1 hover:border-primary/30 hover:shadow-elegant"
+              className="reveal group rounded-lg border border-white/10 bg-white/[0.03] p-6 backdrop-blur transition-smooth hover:border-[var(--brand-wine)]/50 hover:bg-white/[0.06] hover:-translate-y-1"
               style={{ transitionDelay: `${(i % 3) * 60}ms` }}
             >
-              <div className="h-12 w-12 grid place-items-center rounded gradient-red text-primary-foreground shadow-elegant transition-smooth group-hover:scale-110">
+              <div className="h-12 w-12 grid place-items-center rounded gradient-red text-white shadow-elegant transition-smooth group-hover:scale-110">
                 <a.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
+              <h3 className="mt-5 font-display text-xl font-semibold text-white">
                 {a.title}
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{a.text}</p>
+              <p className="mt-2 text-sm text-white/65 leading-relaxed">{a.text}</p>
             </div>
           ))}
         </div>

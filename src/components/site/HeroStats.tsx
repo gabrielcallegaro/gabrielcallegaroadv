@@ -6,7 +6,7 @@ const stats = [
 
 export function HeroStats() {
   return (
-    <div className="relative z-10 w-full border-t border-border bg-background/95 backdrop-blur">
+    <div className="relative z-10 w-full border-t border-white/10 bg-[var(--brand-darker)]/85 backdrop-blur">
       <div className="mx-auto max-w-7xl px-6 py-7 sm:py-8">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
           {stats.map((s) => (
@@ -14,7 +14,7 @@ export function HeroStats() {
               <div className="font-display text-3xl font-semibold text-[var(--brand-wine)] sm:text-4xl">
                 {s.value}
               </div>
-               <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/60">
                 {s.label}
               </div>
             </div>

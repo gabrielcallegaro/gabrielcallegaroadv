@@ -13,7 +13,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="bg-background py-24">
+    <section id="faq" className="py-24 bg-white">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center reveal">
           <span className="text-xs uppercase tracking-[0.25em] text-brand-red font-semibold">

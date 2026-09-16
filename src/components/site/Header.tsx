@@ -36,12 +36,12 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 border-b transition-smooth ${
-        solid ? "border-border bg-background/95 shadow-sm backdrop-blur-md" : "border-transparent bg-background/80 backdrop-blur-sm"
+      className={`fixed top-0 left-0 right-0 z-40 transition-smooth ${
+        solid ? "backdrop-blur-md bg-[oklch(0.13_0.005_0/0.85)] border-b border-white/5" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        <a href={resolveHref("#inicio")} className="flex items-center gap-2 text-foreground">
+        <a href={resolveHref("#inicio")} className="flex items-center gap-2 text-white">
           <img src={logoGc.url} alt="Logo Gabriel Callegaro" className="h-10 w-10 object-contain" />
           <span className="font-display text-lg font-semibold tracking-tight">
             Gabriel Callegaro
@@ -53,7 +53,7 @@ export function Header() {
             <a
               key={l.href}
               href={resolveHref(l.href)}
-              className="text-sm text-muted-foreground hover:text-primary transition-smooth relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-primary hover:after:w-full after:transition-all"
+              className="text-sm text-white/80 hover:text-white transition-smooth relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-[var(--brand-wine)] hover:after:w-full after:transition-all"
             >
               {l.label}
             </a>
@@ -64,14 +64,14 @@ export function Header() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center rounded-full gradient-red px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-elegant active:translate-y-0"
+          className="hidden md:inline-flex items-center rounded gradient-red px-5 py-2.5 text-sm font-semibold text-white shadow-elegant hover:shadow-glow transition-smooth"
         >
           Falar Agora
         </WhatsAppLink>
 
         <button
           aria-label="Abrir menu"
-          className="md:hidden text-foreground"
+          className="md:hidden text-white"
           onClick={() => setOpen((o) => !o)}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -79,14 +79,14 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background shadow-card">
+        <div className="md:hidden bg-[var(--brand-darker)] border-t border-white/5">
           <nav className="flex flex-col px-6 py-4 gap-3">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={resolveHref(l.href)}
                 onClick={() => setOpen(false)}
-                className="py-2 text-muted-foreground hover:text-primary"
+                className="text-white/80 hover:text-white py-2"
               >
                 {l.label}
               </a>
@@ -95,7 +95,7 @@ export function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 rounded-full gradient-red px-6 py-3 text-center font-semibold text-primary-foreground shadow-sm transition-all duration-300 active:scale-[0.98]"
+              className="mt-2 text-center rounded gradient-red px-5 py-3 font-semibold text-white"
             >
               Falar no WhatsApp
             </WhatsAppLink>

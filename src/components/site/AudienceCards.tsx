@@ -25,7 +25,7 @@ const audiences = [
 
 export function AudienceCards() {
   return (
-    <section className="border-b border-border bg-secondary py-24">
+    <section className="py-24 bg-[var(--muted)]">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl reveal">
           <h2 className="font-display text-4xl leading-tight text-[var(--brand-dark)] sm:text-5xl">
@@ -44,7 +44,7 @@ export function AudienceCards() {
             <a
               key={a.title}
               href={a.href}
-              className="group reveal flex items-center justify-between rounded-lg border border-border bg-card p-5 shadow-card transition-smooth hover:-translate-y-1 hover:border-primary/30 hover:shadow-elegant"
+              className="group reveal flex items-center justify-between rounded-lg border border-[var(--border)] bg-white p-5 shadow-card transition-smooth hover:-translate-y-1 hover:border-[var(--brand-wine)]/30 hover:shadow-elegant"
             >
               <div className="flex items-center gap-4">
                 <div className="grid h-10 w-10 place-items-center rounded bg-[var(--brand-red)]/10 text-[var(--brand-red)]">

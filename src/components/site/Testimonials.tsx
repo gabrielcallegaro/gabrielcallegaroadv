@@ -8,7 +8,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="bg-secondary py-24">
+    <section className="py-24 bg-[var(--muted)]">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center max-w-2xl mx-auto reveal">
           <span className="text-xs uppercase tracking-[0.25em] text-brand-red font-semibold">
@@ -24,7 +24,7 @@ export function Testimonials() {
           {testimonials.map((t, i) => (
             <article
               key={i}
-              className="reveal relative rounded-lg bg-card p-7 shadow-card hover-lift border border-border"
+              className="reveal relative rounded-lg bg-white p-7 shadow-card hover-lift border border-[var(--border)]"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <Quote className="absolute top-5 right-5 h-8 w-8 text-brand-red/15" />

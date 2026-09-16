@@ -48,7 +48,7 @@ export const Route = createFileRoute("/blog/$slug")({
     return { post };
   },
   notFoundComponent: () => (
-    <main className="min-h-screen bg-background">
+    <main className="bg-white min-h-screen">
       <Header />
       <section className="pt-40 pb-20 text-center px-6">
         <h1 className="font-display text-3xl">Artigo não encontrado</h1>
@@ -60,7 +60,7 @@ export const Route = createFileRoute("/blog/$slug")({
     </main>
   ),
   errorComponent: ({ error }) => (
-    <main className="min-h-screen bg-background">
+    <main className="bg-white min-h-screen">
       <Header />
       <section className="pt-40 pb-20 text-center px-6">
         <h1 className="font-display text-3xl">Erro ao carregar artigo</h1>
@@ -89,7 +89,7 @@ function PostPage() {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="bg-white min-h-screen">
       <Header />
       <article className="pt-32 pb-20">
         <div className="mx-auto max-w-3xl px-6">
@@ -111,7 +111,7 @@ function PostPage() {
 
           <div
             onClick={trackWhatsAppClick}
-            className="blog-content mt-10 text-neutral-800 leading-relaxed space-y-5 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-[var(--brand-darker)] [&_h2]:mt-10 [&_h2]:mb-2 [&_h3]:font-display [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-[var(--brand-darker)] [&_h3]:mt-7 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_a]:text-[var(--brand-wine)] [&_a]:underline [&_strong]:font-semibold [&_blockquote]:border-l-4 [&_blockquote]:border-[var(--brand-wine)] [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-neutral-700 [&_img]:w-full [&_img]:rounded-lg [&_img]:my-8 [&_img]:shadow-sm [&_.cta-button]:no-underline [&_.cta-button]:inline-flex [&_.cta-button]:items-center [&_.cta-button]:justify-center [&_.cta-button]:gap-2 [&_.cta-button]:bg-[var(--brand-wine)] [&_.cta-button]:text-primary-foreground [&_.cta-button]:px-8 [&_.cta-button]:py-3.5 [&_.cta-button]:rounded-full [&_.cta-button]:font-semibold [&_.cta-button]:shadow-sm [&_.cta-button]:transition-all [&_.cta-button]:duration-300 [&_.cta-button]:mt-6 hover:[&_.cta-button]:-translate-y-0.5 hover:[&_.cta-button]:shadow-elegant"
+            className="blog-content mt-10 text-neutral-800 leading-relaxed space-y-5 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-[var(--brand-darker)] [&_h2]:mt-10 [&_h2]:mb-2 [&_h3]:font-display [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-[var(--brand-darker)] [&_h3]:mt-7 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_a]:text-[var(--brand-wine)] [&_a]:underline [&_strong]:font-semibold [&_blockquote]:border-l-4 [&_blockquote]:border-[var(--brand-wine)] [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-neutral-700 [&_img]:w-full [&_img]:rounded-lg [&_img]:my-8 [&_img]:shadow-sm [&_.cta-button]:no-underline [&_.cta-button]:inline-flex [&_.cta-button]:items-center [&_.cta-button]:justify-center [&_.cta-button]:gap-2 [&_.cta-button]:bg-[var(--brand-wine)] [&_.cta-button]:text-white [&_.cta-button]:px-6 [&_.cta-button]:py-3 [&_.cta-button]:rounded-md [&_.cta-button]:font-medium [&_.cta-button]:mt-6 hover:[&_.cta-button]:opacity-90"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 

@@ -46,31 +46,32 @@ export function Hero() {
         height={1080}
         fetchPriority="high"
         decoding="async"
-        className="absolute inset-0 h-full w-full object-cover object-[65%_center] opacity-55"
+        className="absolute inset-0 h-full w-full object-cover opacity-40"
       />
       <div
         className="absolute inset-0"
         style={{
-          background: "var(--gradient-hero)",
+          background:
+            "linear-gradient(90deg, oklch(0.11 0.005 0 / 0.92) 0%, oklch(0.13 0.005 0 / 0.75) 55%, oklch(0.18 0.06 27 / 0.55) 100%)",
         }}
       />
 
       <div className="relative flex flex-1 items-center">
         <div className="mx-auto w-full max-w-7xl px-6 pt-32 pb-12">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-background/85 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-muted-foreground shadow-sm backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-white/80 backdrop-blur">
               <MapPin className="h-3.5 w-3.5 text-[var(--brand-wine)]" aria-hidden="true" />
               {city ? `Atendimento em ${city} e todo o RS` : `${LAWYER.area} — ${LAWYER.region}`}
             </span>
 
-            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Advogado Trabalhista no Rio Grande do Sul
-              <span className="block text-primary">
+              <span className="block bg-gradient-to-r from-[var(--brand-wine)] to-white bg-clip-text text-transparent">
                 Atendimento online e presencial.
               </span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 sm:text-xl">
               Defesa dos direitos dos trabalhadores com atendimento humanizado,
               análise estratégica e comunicação direta — {city ? `de ${city}` : "do interior"}{" "}
               à capital, em todo o Rio Grande do Sul.
@@ -81,7 +82,7 @@ export function Hero() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 rounded-full gradient-red px-8 py-4 font-semibold text-primary-foreground shadow-elegant transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow active:translate-y-0"
+                className="group inline-flex items-center justify-center gap-2 rounded gradient-red px-7 py-4 font-semibold text-white shadow-elegant transition-smooth hover:shadow-glow"
                 aria-label="Falar com advogado trabalhista pelo WhatsApp"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -90,7 +91,7 @@ export function Hero() {
               </WhatsAppLink>
               <a
                 href="#contato"
-                className="inline-flex items-center justify-center rounded-full border border-primary/20 bg-background/90 px-8 py-4 font-semibold text-primary shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/35 hover:bg-background hover:shadow-card active:translate-y-0"
+                className="inline-flex items-center justify-center rounded border border-white/25 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur transition-smooth hover:bg-white/10"
               >
                 Agendar Consulta
               </a>
@@ -103,8 +104,8 @@ export function Hero() {
                 { n: "24h", l: "Resposta Rápida" },
               ].map((s) => (
                 <div key={s.l} className="border-l-2 border-[var(--brand-wine)] pl-4">
-                  <div className="font-display text-2xl font-bold text-foreground">{s.n}</div>
-                  <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{s.l}</div>
+                  <div className="font-display text-2xl font-bold text-white">{s.n}</div>
+                  <div className="mt-1 text-xs uppercase tracking-wider text-white/60">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -114,7 +115,7 @@ export function Hero() {
 
       <HeroStats />
 
-      <div className="relative z-10 w-full border-t border-border bg-background py-3 text-center text-xs uppercase tracking-widest text-muted-foreground">
+      <div className="relative z-10 w-full bg-[var(--brand-darker)] py-3 text-center text-xs uppercase tracking-widest text-white/40">
         Role para descobrir
       </div>
     </section>
