@@ -9,9 +9,9 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
-import appCss from "../styles.css?url";
+import appCss from "../styles.css?inline";
 import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
-import playfairWoff2 from "@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2?url";
+import playfairWoff2 from "@fontsource-variable/playfair-display/files/playfair-display-latin-wght-normal.woff2?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -112,11 +112,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: playfairWoff2,
         crossOrigin: "anonymous",
       },
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
     ],
+    styles: [{ children: appCss }],
     scripts: [
       {
         type: "text/javascript",
