@@ -71,7 +71,7 @@ export const Route = createFileRoute("/blog/$slug")({
       <Header />
       <section className="pt-40 pb-20 text-center px-6">
         <h1 className="font-display text-3xl">Erro ao carregar artigo</h1>
-        <p className="mt-2 text-neutral-600">{error.message}</p>
+        <p className="mt-2 text-neutral-600">{error instanceof Error ? error.message : String(error)}</p>
       </section>
       <Footer />
     </main>
