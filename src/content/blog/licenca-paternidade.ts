@@ -33,7 +33,7 @@ const post: BlogPost = {
     <h2>O que é o salário-paternidade?</h2>
     <p>Na regra atual dos empregados, a remuneração dos dias de licença é suportada pela empresa. Com a nova lei, o salário-paternidade passa a integrar a proteção previdenciária, de modo semelhante ao salário-maternidade.</p>
     <p>Para o empregado, a empresa paga o benefício e compensa os valores conforme as regras legais. Em outras categorias de segurados, o pagamento pode ser feito diretamente pela Previdência Social.</p>
-    <p>A duração do benefício acompanha o período de afastamento previsto na lei. Situações específicas, como o nascimento ou a adoção de criança com deficiência, possuem regras adicionais.</p>
+    <p>A duração do benefício acompanha o período de afastamento previsto na lei. No nascimento ou na adoção de criança ou adolescente com deficiência, o período é acrescido de um terço. <strong>Esse acréscimo se refere à duração do afastamento, não a um adicional de 1/3 no valor do benefício.</strong></p>
 
     <h2>Quem tem direito à nova licença-paternidade?</h2>
     <p>A lei amplia a proteção para diferentes categorias. Além dos empregados com carteira assinada, o salário-paternidade contempla, conforme os requisitos previdenciários aplicáveis:</p>
@@ -60,7 +60,7 @@ const post: BlogPost = {
     <img src="${img2}" alt="Trabalhador conversando com uma profissional de recursos humanos sobre licença-paternidade" loading="lazy" width="1280" height="720" />
 
     <h2>O que acontece se houver hospitalização ou complicações?</h2>
-    <p>A lei contempla situações excepcionais relacionadas ao parto e à internação. A necessidade de cuidados e a documentação médica podem alterar a contagem ou a duração do afastamento nas hipóteses expressamente previstas.</p>
+    <p>A lei prevê prorrogação nas hipóteses de internação da mãe ou do recém-nascido relacionadas ao parto, observados os requisitos legais. A contagem considera a alta de quem permanecer internado por último.</p>
     <p>Como nem toda internação gera a mesma consequência, é importante verificar quem foi hospitalizado, o motivo e os requisitos legais, sem presumir uma prorrogação automática para qualquer situação.</p>
 
     <h2>A empresa precisa fazer alguma coisa diferente?</h2>
@@ -81,7 +81,7 @@ const post: BlogPost = {
     <h2>Conclusão: uma mudança importante para os pais brasileiros</h2>
     <p>A Lei 15.371/2026 amplia a proteção dos trabalhadores e reconhece a importância do pai nos primeiros dias de vida da criança. A ampliação gradual da licença, a criação do salário-paternidade e a proteção no emprego passam a produzir seus principais efeitos a partir de 2027.</p>
     <p>Cada situação tem particularidades. Este conteúdo é informativo e não substitui a análise individual dos requisitos legais.</p>
-    <p><strong>Referência:</strong> Lei 15.371, de 31 de março de 2026.</p>
+    <p><strong>Referência:</strong> <a href="https://in.gov.br/web/dou/-/lei-n-15.371-de-31-de-marco-de-2026-697067576" target="_blank" rel="noopener noreferrer">Lei 15.371, de 31 de março de 2026 — Diário Oficial da União</a>.</p>
 
     <p style="text-align:center"><a class="cta-button" href="${WHATSAPP_URL}" target="_blank" rel="noopener noreferrer">Veja seu caso com um advogado especializado</a></p>
   `,
