@@ -15,8 +15,10 @@ import reconhecimentoVinculo from "./reconhecimento-vinculo.ts";
 import estabilidadeGestante from "./estabilidade-gestante.ts";
 import insalubridadePericulosidade from "./insalubridade-periculosidade.ts";
 import direitosNaDemissao from "./direitos-na-demissao.ts";
+import licencaPaternidade from "./licenca-paternidade.ts";
 
 export const posts: BlogPost[] = [
+  licencaPaternidade,
   rescisaoIndireta,
   reconhecimentoVinculo,
   estabilidadeGestante,
