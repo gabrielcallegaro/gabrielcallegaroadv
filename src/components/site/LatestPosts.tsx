@@ -30,6 +30,7 @@ export function LatestPosts() {
             >
               <p className="text-xs uppercase tracking-wider text-[var(--muted-foreground)]">
                 {new Date(p.date).toLocaleDateString("pt-BR", {
+                  timeZone: "UTC",
                   day: "2-digit",
                   month: "long",
                   year: "numeric",
