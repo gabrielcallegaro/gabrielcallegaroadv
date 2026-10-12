@@ -7,7 +7,14 @@ import { getPostBySlug, posts, type BlogPost } from "@/content/blog";
 export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => {
     const post = getPostBySlug(params.slug);
-    if (!post) return { meta: [{ title: "Artigo não encontrado" }] };
+    if (!post) return { meta: [
+      { title: "Artigo não encontrado | Gabriel Callegaro" },
+      { name: "description", content: "O artigo solicitado não está disponível no blog de Gabriel Callegaro." },
+      { property: "og:title", content: "Artigo não encontrado | Gabriel Callegaro" },
+      { property: "og:description", content: "Consulte os artigos sobre direitos trabalhistas no blog de Gabriel Callegaro." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ] };
     const url = `https://callegaroadvocacia.com.br/blog/${post.slug}`;
     return {
       meta: [
@@ -64,7 +71,7 @@ export const Route = createFileRoute("/blog/$slug")({
       <Header />
       <section className="pt-40 pb-20 text-center px-6">
         <h1 className="font-display text-3xl">Erro ao carregar artigo</h1>
-        <p className="mt-2 text-neutral-600">{error.message}</p>
+        <p className="mt-2 text-neutral-600">{error instanceof Error ? error.message : String(error)}</p>
       </section>
       <Footer />
     </main>
@@ -98,6 +105,7 @@ function PostPage() {
           </Link>
           <p className="mt-6 text-xs uppercase tracking-wider text-neutral-500">
             {new Date(post.date).toLocaleDateString("pt-BR", {
+              timeZone: "UTC",
               day: "2-digit",
               month: "long",
               year: "numeric",

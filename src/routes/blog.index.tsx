@@ -15,6 +15,8 @@ export const Route = createFileRoute("/blog/")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/blog" }],
   }),
@@ -44,6 +46,7 @@ function BlogIndex() {
               >
                 <p className="text-xs uppercase tracking-wider text-neutral-500">
                   {new Date(p.date).toLocaleDateString("pt-BR", {
+                    timeZone: "UTC",
                     day: "2-digit",
                     month: "long",
                     year: "numeric",
