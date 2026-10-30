@@ -21,7 +21,7 @@ import { useReveal } from "@/hooks/use-reveal";
 const TITLE = "Advogado Trabalhista no Rio Grande do Sul | Gabriel Callegaro";
 const DESCRIPTION =
   "Advogado trabalhista no RS — atendimento online e presencial. Defesa de verbas rescisórias, horas extras, vínculo, FGTS e acidente de trabalho. Fale agora pelo WhatsApp.";
-const SITE_URL = "https://gabrielcallegaroadv.lovable.app";
+const SITE_URL = "https://callegaroadvocacia.com.br";
 const FAQ_ITEMS: { q: string; a: string }[] = [
   { q: "Fui demitido sem justa causa, quais são meus direitos?", a: "Você tem direito ao aviso prévio, 13º proporcional, férias proporcionais com 1/3, saldo de salário, FGTS com multa de 40% e acesso ao seguro-desemprego, entre outros, conforme o caso." },
   { q: "Posso cobrar horas extras não pagas?", a: "Sim. Toda jornada além das 8 horas diárias ou 44 semanais (salvo regime especial) deve ser remunerada com adicional mínimo de 50%. É possível cobrar judicialmente os últimos 5 anos." },

@@ -1,14 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-// TODO: substituir pelo domínio do projeto quando publicado.
-const BASE_URL = "";
+import { posts } from "@/content/blog";
+
+const BASE_URL = "https://callegaroadvocacia.com.br";
+
+const entries: { path: string; changefreq: string; priority: string }[] = [
+  { path: "/", changefreq: "weekly", priority: "1.0" },
+  { path: "/blog", changefreq: "weekly", priority: "0.8" },
+  { path: "/bancario", changefreq: "monthly", priority: "0.8" },
+  { path: "/previdencia", changefreq: "monthly", priority: "0.8" },
+  ...posts.map((p) => ({
+    path: `/blog/${p.slug}`,
+    changefreq: "monthly",
+    priority: "0.7",
+  })),
+];
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const entries = [{ path: "/", changefreq: "weekly", priority: "1.0" }];
         const urls = entries.map(
           (e) =>
             `  <url>\n    <loc>${BASE_URL}${e.path}</loc>\n    <changefreq>${e.changefreq}</changefreq>\n    <priority>${e.priority}</priority>\n  </url>`,
