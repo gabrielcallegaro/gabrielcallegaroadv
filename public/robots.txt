@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://callegaroadvocacia.com.br/sitemap.xml
